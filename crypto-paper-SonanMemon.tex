@@ -1,0 +1,1070 @@
+\documentclass[12pt]{article}
+\pdfminorversion=5 
+\pdfcompresslevel=9
+\pdfobjcompresslevel=2
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{lmodern}
+\usepackage{caption}
+\usepackage[table]{xcolor}
+\usepackage{subfigure}
+\usepackage{bigints}
+\usepackage{bbm}
+\usepackage{xr}
+\usepackage{lipsum}
+\usepackage{pdfpages}
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+\definecolor{redd}{rgb}{0.8, 0.1, 0.1}
+\definecolor{navyblue}{rgb}{0.0, 0.0, 0.45}
+\definecolor{amaranth}{rgb}{0.9, 0.17, 0.31}
+\definecolor{alizarin}{rgb}{0.82, 0.1, 0.26}
+\definecolor{bostonuniversityred}{rgb}{0.8, 0.0, 0.0}
+\definecolor{brickred}{rgb}{0.8, 0.25, 0.33}
+\definecolor{cornellred}{rgb}{0.7, 0.11, 0.11}
+\usepackage[colorlinks,linkcolor=brickred,urlcolor=brickred,citecolor=navyblue]{hyperref}
+\newcommand{\navy}[1]{\textcolor{blue}{\bf #1}}
+\newcommand{\navymth}[1]{\textcolor{blue}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\usepackage{subfigure}
+\usepackage[authoryear,round]{natbib}
+\usepackage{sectsty}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage[]{morefloats}
+\usepackage{booktabs}
+\usepackage{float}
+%\usepackage[runin]{abstract}
+%\abslabeldelim{\;}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{threeparttable}
+%\usepackage{mathptmx}
+%\usepackage{newtxmath}
+%\usepackage{times}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usepackage{rotating}
+\UseRawInputEncoding
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage[newcommands]{ragged2e}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage{setspace} 
+\doublespacing
+\usepackage{mathpazo}
+\usepackage{etoolbox}
+
+\setcounter{MaxMatrixCols}{12}
+
+
+
+
+
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+
+\parskip5pt
+\parindent15pt
+\renewcommand{\baselinestretch}{1.1}
+
+\newcommand*{\theorembreak}{\usebeamertemplate{theorem end}\framebreak\usebeamertemplate{theorem begin}}
+
+\newcommand{\newtopic}[1]{\textcolor{Green}{\Large \bf #1}}
+
+
+\definecolor{pale}{RGB}{235, 235, 235}
+\definecolor{pale2}{RGB}{175,238,238}
+\definecolor{turquois4}{RGB}{0,134,139}
+
+% Typesetting code
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\usepackage{minted}
+\usemintedstyle{friendly}
+\newminted{python}{mathescape,frame=lines,framesep=4mm,bgcolor=bg}
+\newminted{ipython}{mathescape,frame=lines,framesep=4mm,bgcolor=bg}
+\newminted{julia}{mathescape,frame=lines,framesep=4mm,bgcolor=bg}
+\newminted{c}{mathescape,linenos=true}
+\newminted{r}{mathescape,  frame=none, baselinestretch=1, framesep=2mm}
+\renewcommand{\theFancyVerbLine}{\sffamily
+	\textcolor[rgb]{0.5,0.5,1.0}{\scriptsize {\arabic{FancyVerbLine}}}}
+
+
+\usepackage{stmaryrd}
+
+\newcommand{\Fact}{\textcolor{Brown}{\bf Fact. }}
+\newcommand{\Facts}{\textcolor{Brown}{\bf Facts }}
+\newcommand{\keya}{\textcolor{turquois4}{\bf Key Idea. }}
+\newcommand{\Factnodot}{\textcolor{Brown}{\bf Fact }}
+\newcommand{\Eg}{\textcolor{ForestGreen}{Example. }}
+\newcommand{\Egs}{\textcolor{ForestGreen}{Examples. }}
+\newcommand{\Ex}{{\bf Ex. }}
+\newcommand{\Thm}{\textcolor{Brown}{\bf Theorem. }}
+\newcommand{\Prf}{\textcolor{turquois4}{\bf Proof.}}
+\newcommand{\Ass}{\textcolor{turquois4}{\bf Assumption.}} 
+\newcommand{\Lem}{\textcolor{Brown}{\bf Lemma. }}
+
+%source code 
+
+
+
+% cali
+\usepackage{mathrsfs}
+\usepackage{bbm}
+\usepackage{subfigure}
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+
+\newcommand\T{{\mathpalette\raiseT\intercal}}
+\newcommand\raiseT[2]{\raisebox{0.25ex}{$#1#2$}}
+
+\DeclareMathOperator{\cl}{cl}
+%\DeclareMathOperator{\argmax}{argmax}
+\DeclareMathOperator{\interior}{int}
+\DeclareMathOperator{\Prob}{Prob}
+\DeclareMathOperator{\kernel}{ker}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\determinant}{det}
+\DeclareMathOperator{\trace}{trace}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\corr}{corr}
+\DeclareMathOperator{\range}{rng}
+\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\mse}{mse}
+\DeclareMathOperator{\se}{se}
+\DeclareMathOperator{\row}{row}
+\DeclareMathOperator{\col}{col}
+\DeclareMathOperator{\dimension}{dim}
+\DeclareMathOperator{\fracpart}{frac}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\colspace}{colspace}
+
+\providecommand{\inner}[1]{\left\langle{#1}\right\rangle}
+
+% mics short cuts and symbols
+% mics short cuts and symbols
+\newcommand{\st}{\ensuremath{\ \mathrm{s.t.}\ }}
+\newcommand{\setntn}[2]{ \{ #1 : #2 \} }
+\newcommand{\cf}[1]{ \lstinline|#1| }
+\newcommand{\otms}[1]{ \leftidx{^\circ}{#1}}
+
+\newcommand{\fore}{\therefore \quad}
+\newcommand{\tod}{\stackrel { d } {\to} }
+\newcommand{\tow}{\stackrel { w } {\to} }
+\newcommand{\toprob}{\stackrel { p } {\to} }
+\newcommand{\toms}{\stackrel { ms } {\to} }
+\newcommand{\eqdist}{\stackrel {\textrm{ \scriptsize{d} }} {=} }
+\newcommand{\iidsim}{\stackrel {\textrm{ {\sc iid }}} {\sim} }
+\newcommand{\1}{\mathbbm 1}
+\newcommand{\dee}{\,{\rm d}}
+\newcommand{\given}{\, | \,}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+
+\renewcommand{\rho}{\varrho}
+
+\newcommand{\htau}{ \hat \tau }
+\newcommand{\hgamma}{ \hat \gamma }
+
+\newcommand{\boldx}{ {\mathbf x} }
+\newcommand{\boldu}{ {\mathbf u} }
+\newcommand{\boldv}{ {\mathbf v} }
+\newcommand{\boldw}{ {\mathbf w} }
+\newcommand{\boldy}{ {\mathbf y} }
+\newcommand{\boldb}{ {\mathbf b} }
+\newcommand{\bolda}{ {\mathbf a} }
+\newcommand{\boldc}{ {\mathbf c} }
+\newcommand{\boldi}{ {\mathbf i} }
+\newcommand{\bolde}{ {\mathbf e} }
+\newcommand{\boldp}{ {\mathbf p} }
+\newcommand{\boldq}{ {\mathbf q} }
+\newcommand{\bolds}{ {\mathbf s} }
+\newcommand{\boldt}{ {\mathbf t} }
+\newcommand{\boldz}{ {\mathbf z} }
+
+\newcommand{\boldzero}{ {\mathbf 0} }
+\newcommand{\boldone}{ {\mathbf 1} }
+
+\newcommand{\boldalpha}{ {\boldsymbol \alpha} }
+\newcommand{\boldbeta}{ {\boldsymbol \beta} }
+\newcommand{\boldgamma}{ {\boldsymbol \gamma} }
+\newcommand{\boldtheta}{ {\boldsymbol \theta} }
+\newcommand{\boldxi}{ {\boldsymbol \xi} }
+\newcommand{\boldtau}{ {\boldsymbol \tau} }
+\newcommand{\boldepsilon}{ {\boldsymbol \epsilon} }
+\newcommand{\boldmu}{ {\boldsymbol \mu} }
+\newcommand{\boldSigma}{ {\boldsymbol \Sigma} }
+\newcommand{\boldOmega}{ {\boldsymbol \Omega} }
+\newcommand{\boldPhi}{ {\boldsymbol \Phi} }
+\newcommand{\boldLambda}{ {\boldsymbol \Lambda} }
+\newcommand{\boldphi}{ {\boldsymbol \phi} }
+
+\newcommand{\Sigmax}{ {\boldsymbol \Sigma_{\boldx}}}
+\newcommand{\Sigmau}{ {\boldsymbol \Sigma_{\boldu}}}
+\newcommand{\Sigmaxinv}{ {\boldsymbol \Sigma_{\boldx}^{-1}}}
+\newcommand{\Sigmav}{ {\boldsymbol \Sigma_{\boldv \boldv}}}
+
+\newcommand{\hboldx}{ \hat {\mathbf x} }
+\newcommand{\hboldy}{ \hat {\mathbf y} }
+\newcommand{\hboldb}{ \hat {\mathbf b} }
+\newcommand{\hboldu}{ \hat {\mathbf u} }
+\newcommand{\hboldtheta}{ \hat {\boldsymbol \theta} }
+\newcommand{\hboldtau}{ \hat {\boldsymbol \tau} }
+\newcommand{\hboldmu}{ \hat {\boldsymbol \mu} }
+\newcommand{\hboldbeta}{ \hat {\boldsymbol \beta} }
+\newcommand{\hboldgamma}{ \hat {\boldsymbol \gamma} }
+\newcommand{\hboldSigma}{ \hat {\boldsymbol \Sigma} }
+
+\newcommand{\boldA}{\mathbf A}
+\newcommand{\boldB}{\mathbf B}
+\newcommand{\boldC}{\mathbf C}
+\newcommand{\boldD}{\mathbf D}
+\newcommand{\boldI}{\mathbf I}
+\newcommand{\boldL}{\mathbf L}
+\newcommand{\boldM}{\mathbf M}
+\newcommand{\boldP}{\mathbf P}
+\newcommand{\boldQ}{\mathbf Q}
+\newcommand{\boldR}{\mathbf R}
+\newcommand{\boldX}{\mathbf X}
+\newcommand{\boldU}{\mathbf U}
+\newcommand{\boldV}{\mathbf V}
+\newcommand{\boldW}{\mathbf W}
+\newcommand{\boldY}{\mathbf Y}
+\newcommand{\boldZ}{\mathbf Z}
+
+\newcommand{\bSigmaX}{ {\boldsymbol \Sigma_{\hboldbeta}} }
+\newcommand{\hbSigmaX}{ \mathbf{\hat \Sigma_{\hboldbeta}} }
+
+\newcommand{\RR}{\mathbbm R}
+\newcommand{\CC}{\mathbbm C}
+\newcommand{\NN}{\mathbbm N}
+\newcommand{\PP}{\mathbbm P}
+\newcommand{\EE}{\mathbbm E \nobreak\hspace{.1em}}
+\newcommand{\EEP}{\mathbbm E_P \nobreak\hspace{.1em}}
+\newcommand{\ZZ}{\mathbbm Z}
+\newcommand{\QQ}{\mathbbm Q}
+
+
+\newcommand{\XX}{\mathcal X}
+
+\newcommand{\aA}{\mathcal A}
+\newcommand{\fF}{\mathscr F}
+\newcommand{\bB}{\mathscr B}
+\newcommand{\iI}{\mathscr I}
+\newcommand{\rR}{\mathscr R}
+\newcommand{\dD}{\mathcal D}
+\newcommand{\lL}{\mathcal L}
+\newcommand{\llL}{\mathcal{H}_{\ell}}
+\newcommand{\gG}{\mathcal G}
+\newcommand{\hH}{\mathcal H}
+\newcommand{\nN}{\textrm{\sc n}}
+\newcommand{\lN}{\textrm{\sc ln}}
+\newcommand{\pP}{\mathscr P}
+\newcommand{\qQ}{\mathscr Q}
+\newcommand{\xX}{\mathcal X}
+
+\newcommand{\ddD}{\mathscr D}
+
+
+\newcommand{\R}{{\texttt R}}
+\newcommand{\risk}{\mathcal R}
+\newcommand{\Remp}{R_{{\rm emp}}}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand{\ess}{ \textrm{{\sc ess}} }
+\newcommand{\tss}{ \textrm{{\sc tss}} }
+\newcommand{\rss}{ \textrm{{\sc rss}} }
+\newcommand{\rssr}{ \textrm{{\sc rssr}} }
+\newcommand{\ussr}{ \textrm{{\sc ussr}} }
+\newcommand{\zdata}{\mathbf{z}_{\mathcal D}}
+\newcommand{\Pdata}{P_{\mathcal D}}
+\newcommand{\Pdatatheta}{P^{\mathcal D}_{\theta}}
+\newcommand{\Zdata}{Z_{\mathcal D}}
+
+
+\newcommand{\e}[1]{\mathbbm{E}[{#1}]}
+\newcommand{\p}[1]{\mathbbm{P}({#1})}
+
+%\theoremstyle{plain}
+%\newtheorem{axiom}{Axiom}[section]
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[section]
+%\newtheorem{lemma}{Lemma}[section]
+%\newtheorem{proposition}{Proposition}[section]
+%
+%\theoremstyle{definition}
+%\newtheorem{definition}{Definition}[section]
+%\newtheorem{example}{Example}[section]
+%\newtheorem{remark}{Remark}[section]
+%\newtheorem{notation}{Notation}[section]
+%\newtheorem{assumption}{Assumption}[section]
+%\newtheorem{condition}{Condition}[section]
+%\newtheorem{exercise}{Ex.}[section]
+%\newtheorem{fact}{Fact}[section]
+
+
+\usepackage[T1]{fontenc}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}{Acknowledgement}
+\newtheorem{assumption}{Assumption}
+\newtheorem{corollary}{Corollary}
+\newtheorem{criterion}{Criterion}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{observation}{Observation}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+%\input{tcilatex}
+
+\makeatletter
+\def\title@font{\Large\bfseries}
+\let\ltx@maketitle\@maketitle
+\def\@maketitle{\bgroup%
+	\let\ltx@title\@title%
+	\def\@title{\resizebox{\textwidth}{!}{%
+			\mbox{\title@font\ltx@title}%
+	}}%
+	\ltx@maketitle%
+	\egroup}
+\makeatother
+\usepackage{setspace}
+\usepackage{amsmath}
+\onehalfspacing
+\newenvironment{p_enumerate}{
+	\begin{enumerate}
+		\setlength{\itemsep}{1pt}
+		\setlength{\parskip}{0pt}
+		\setlength{\parsep}{0pt}
+	}{\end{enumerate}}
+\sectionfont{\centering\mdseries\scshape\bfseries}
+\subsectionfont{\raggedright\mdseries\scshape\bfseries}
+\subsubsectionfont{\flushleft\mdseries\itshape\bfseries}
+\makeatletter
+\def\@seccntformat#1{\csname the#1\endcsname.\quad}
+\makeatother
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+		\hbox{}\nobreak\hfil(#1)%
+		\parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+\newsavebox\mybox
+\newenvironment{aquote}[1]
+{\savebox\mybox{#1}\begin{quote}}
+	{\signed{\usebox\mybox}\end{quote}}
+
+\pdfminorversion=4
+
+\makeatletter
+\newcommand{\changeoperator}[1]{%
+	\csletcs{#1@saved}{#1@}%
+	\csdef{#1@}{\changed@operator{#1}}%
+}
+\newcommand{\changed@operator}[1]{%
+	\mathop{%
+		\mathchoice{\textstyle\csuse{#1@saved}}
+		{\csuse{#1@saved}}
+		{\csuse{#1@saved}}
+		{\csuse{#1@saved}}%
+	}%
+}
+\makeatother
+
+\changeoperator{sum}
+\changeoperator{
+	prod}
+
+\begin{document}
+	
+	
+	
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=0.4\linewidth]{pidelogo.jpg}		
+			\caption*{}
+		\end{center}
+	\end{figure}
+
+\vspace{-0.5ex}
+
+\begin{tabular}{l@{\hskip 4in}c@{\hskip 1in}c}
+	\textbf{June 2022} & \textbf{No. 2022: 6}
+	\vspace{0.15cm} \\
+\end{tabular}
+
+\begin{center}
+\textbf{Cryptocurrencies: Review of Economics and Policy}
+\end{center}
+
+\begin{center}
+	\textbf{Working Paper 2022}
+\end{center}
+
+\begin{center}
+	\textbf{Sonan Memon}, Pakistan Institute of Development Economics, Islamabad
+\end{center}
+
+
+
+\newpage{}
+
+
+
+	
+	\title{{Cryptocurrencies: Review of Economics and Policy  %\thanks {}
+			%\title{{Money Demand Breakdown: An international Investigation
+			}}
+		
+	
+			
+			%\date{This version: February, 2016\\
+				%{First version: December, 2015}}
+			\date{This version: June 2022}%\\This version: February, 2017}
+		
+		
+		\author{Sonan Memon\footnote{Research Economist, PIDE, Islamabad. \texttt{smemon@pide.org.pk}}}
+		
+		
+		
+		\newpage{}
+		
+		\maketitle
+		\vspace{-2ex}
+		
+		
+
+		
+
+	
+	
+	
+		
+		\begin{center}
+			\line(1,0){470}
+		\end{center}
+		\begin{spacing}{1.1}
+			\vspace{-3ex}
+			\begin{abstract}
+				\noindent 
+				In this review paper, I begin by discussing crypto's market penetration, legal status and economic opportunities for Pakistan. I mainly focus on the \textit{economics of digital ``currencies''}. Some key questions include how does crypto ``currency'' compare with traditional fiat currencies as a substitute? Which economic problems does it solve currently or has the potential to solve (e.g lowers verification costs and networking costs)? What are its economic limitations (e.g high energy costs, speculative bubbles, prohibitive costs of maintaining incentive compatibility and the blockchain trilemma)? How does widespread adoption of digital currencies change the monetary and fiscal policy paradigm? Which set of regulations are needed from policymakers to address crypto's adverse effects such as accommodating illicit activities and threatening consumer protection? In the appendix, I also provide a brief summary of design features of the technology which underlies cryptocurrencies.
+			\end{abstract}
+		\end{spacing}
+		\textbf{Keywords:} Cryptocurrencies: Bitcoin, Ethereum, Tether etc. Blockchain Technology. Economics of Cryptocurrencies. Implications for Fiscal and Monetary Policy. Regulation of Crypto Market. {}\\
+		\textbf{JEL Classification:} E00, E31, E40, E41, E42, E43, E44, E50-E58, E62, F33.
+		%\textbf{JEL Classification:}
+		\\
+		\begin{center}
+			\vspace{-8ex}
+			\line(1,0){470}
+		\end{center}
+		\pagenumbering{arabic}
+		\baselineskip=18pt 
+		
+		\newpage{}
+		
+			\begin{figure}[H]
+			\begin{center}
+				\includegraphics[width=0.6\linewidth]{crypto-pic.jpg}		
+				\caption*{}
+			\end{center}
+		\end{figure}
+		
+		
+		\section{Introduction}
+		
+		
+		
+			Satoshi Nakamoto\footnote{Who he/she/they were is still unknown since Nakamoto is a pseudonym.} invented \textit{``Bitcoin''}, the first successful peer to peer system for decentralized exchange of currencies (see \cite{nakamoto2008bitcoin}). Bitcoin is a particular cryptocurrency (crypto) and more than 18000 of these are in existence as of early 2022 \cite{hayesinvestopedia2022}. A crypto, broadly defined is virtual or digital money that takes the form of tokens or \textit{``coins''}. While crypto is the largest market in which blockchain technology is used, the \textit{Web3} encompasses much more and can include broader ``decentralized online ecosystems'' \cite{korpal2022decentralization}. However, the focus of this brief is on crypto only, not on \textit{Web3} more broadly.
+			
+			
+			\textit{Cryptography} in ``cryptocurrencies'' allows for communications in the presence of \textit{adversaries}. It prevents adversaries\footnote{Fraudsters or agents who want to hack or interfere with the smoothness of free trade process.} from accessing the information-privacy by allowing \textit{secrecy} in transactions. It provides a substitute for \textit{third party} involvement and a fully decentralized system for exchange of digital currencies, free from government control. In principle\footnote{We are far from achieving this at the moment due to economic and technological constraints of current cryptocurrencies.}, it can make conventional banking largely irrelevant by replacing it with a technologically superior alternative. This solves the problems of fraud, privacy violation, high verification costs, misuse of market power by dominant banking players and security which exist with conventional banking.
+			
+			
+			However, the decentralized system also introduces some problems and the current technology is not sufficiently \textit{scalable} to compete with conventional banking. For instance, while Visa can process up to 24,000 transactions per second, Bitcoin can only process 7 and Ethereum can handle only 20 \cite{crypto}. There are many other concerns regarding market volatility, speculation and limited use in pure economic transactions, which has led some economists to become highly skeptical of this ``bubble'' (see for instance \cite{krugman2018transaction}, \cite{roubini2018blockchain} and \cite{cochrane2017bitcoin}). Nevertheless, in principle some solutions to these limitations may be found in the future.
+			
+			
+			 Apart from Bitcoin, some major market players are Ethereum, Litecoin, Tether, Monero, Dogecoin etc (see \cite{hayesinvestopedia2022}). There are slight design variations across these in terms of the services they offer. The crypto market capitalization approximately amounts to \$1.7 trillion; in every 24 hours, \$91 billion worth of cryptos are traded, most of them Bitcoin or Ethereum \cite{whiteWEF2022}. Last year, the estimated crypto ownership rates were an average of 3.9\% of global population, with over 300 million users worldwide. Over 18,000 businesses are already accepting crypto payments. Some top countries include India (100 million users), USA (27 million), Nigeria and Vietnam \cite{tripleA2022}. Next, I will briefly describe the services offered by three major market players, apart from Bitcoin.
+			
+			 For instance, \textit{Ethereum} is a decentralized platform that enables smart contracts and decentralized applications without any downtime, fraud or interference from a third party. It creates decentralized financial products that anyone in the world can freely access, regardless of nationality, ethnicity, or faith. In some countries where state infrastructure is weak, it has the potential to provide bank accounts, loans and a variety of other financial products. Meanwhile, \textit{Stellar} is an open blockchain network designed to provide enterprise solutions by connecting financial institutions for the purpose of large transactions. Huge transactions between banks and investment firms typically take several days, involving a number of intermediaries, and high costs can now be made nearly instantaneously \cite{hayesinvestopedia2022}. On the other hand, \textit{Tether} and other ``stablecoins'' attempt to smooth out price fluctuations to attract risk-averse users. Tether's price is tied directly to the price of U.S. dollar and allows convenient transfers from other cryptocurrencies back to U.S dollars in a more timely manner than actual conversion to normal currency \cite{hayesinvestopedia2022}. 
+			
+		
+			
+			
+			
+			
+			
+			
+				
+			
+			
+			
+			
+			
+\section{Crypto in Pakistan: Market Size, Policy and Opportunities}
+			
+			
+			
+			
+		
+	It is estimated that more than 9 million people own cryptocurrencies in Pakistan and interest in crypto is dramatically increasing \cite{tripleA2022}.
+			
+			
+			
+		The State Bank of Pakistan (henceforth SBP) stated that ``Digital currencies are neither recognized as a Legal Tender nor has it authorized for the issuance, sale, purchase, exchange or investment in Virtual Currencies'' \cite{khurshid2020}. The SBP has cautioned against the use of crypto and advised both the public and institutions against dealing in the coins but it is not an \textit{outright} ban. SBP submitted to the Sindh High Court that virtual currencies have become a source of major fraud, targeting vulnerable subsets of population to exploit their urge for earning quick profits, including offer of Ponzi schemes. There are also concerns regarding use for money laundering and terrorism financing. The anonymous nature of these coins makes legal recourse in the case of fraud almost impossible \cite{khurshid2020}.
+		
+		 Meanwhile, \cite{younus2022} has argued that Pakistan's young talent base has the capability for innovating at home for the global \textit{Web3}\footnote{\textit{Web3} includes crypto and other blockchain innovations.} ecosystem including crypto. If empowered, this talent can bring in significant foreign exchange earnings, slow the brain drain of top talent, and add billions of dollars to the local economy through additional direct and indirect tax revenues, investment in new businesses, and excess savings in Pakistan. Based on calculations in \cite{younus2022}, this emerging ecosystem can generate almost \$100 billion in total income for technology talent over the next 25 years in Pakistan.
+		 
+			 
+			 
+		
+		\section{Economics of Cryptocurrencies}
+		
+		
+		I will discuss some key economic implications of widespread adoption of crypto such as impact on electricity costs, substitution for Fiat currencies and effect on inflation, potential reduction in verification and networking costs of transactions, implication of rent seeking and incentive compatibility, speculation and volatility, as well as the Blockchain Trilemma.
+		
+		
+		\subsection{Energy Consumption}
+		
+		
+		Electricity consumption of Bitcoin has become as high as electricity costs of countries like Denmark and Ireland \cite{sarkodie2022dataset} world wide. For instance, \cite{benetton2019} found empirical evidence that crypto-mining crowds out other economic activities and may result in net welfare loss. Using data from various cities in China and New York State, \cite{benetton2019} found large negative externalities of crypto-mining on the local economy, such as distortion to local wages and electricity prices. Given the already existent energy crisis in Pakistan, excessive use of crypto can exacerbate the energy supply shortfall.
+		
+		The following figure uses data from Cambridge Center For Alternative Finance at \textit{Cambridge University}, depicting monthly electricity consumption data from 2017-2022 for Bitcoin, indicating a dramatic explosion in terawatts of electricity consumed by Bitcoin.
+		
+		
+			\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{bitcoin_electricity.png}
+				\caption{Source is \textit{Cambridge Center for Alternative Finance}}
+			\end{Center}
+		\end{figure}
+		
+		
+		
+		
+		
+		
+		\subsection{Bitcoins as Substitutes for Fiat Currencies}
+		
+		Bitcoin is fundamentally a \textit{deflationary} asset, which is why citizens of countries with unstable fiat currencies are increasingly using it as store of value to protect against hyperinflation and rising costs of living. Some major examples of such countries are Venezeula, Iran and El-Salvador \cite{nathanreiff2021}. There is evidence that investors move from fiat currencies to Bitcoin cryptocurrency in environments with low trust and high uncertainty \cite{jin2021estimating}.  
+		
+		Unlike dollars or any other traditional fiat currencies, Bitcoin is designed to have a limited supply which will never exceed 21 million by design \cite{nakamoto2008bitcoin}, making it an attractive store of value that is resistant to inflation and devaluation by a government or central banks. Figure 2 below shows data from Bloomberg, indicating that since 2011, Bitcoin has deflated by more than 99\%. However, there are concerns that Bitcoin is more volatile than traditional \textit{inflation hedging} tools such as gold and currently, there does not exist a sufficiently large sample of data to claim that Bitcoin is deflationary.
+		
+	
+		
+			\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{inflation_bitcoin.png}
+				\caption{Source is Bloomberg}
+			\end{Center}
+		\end{figure}
+		
+		
+		There is also empirical evidence from time series VAR models\footnote{Vector Autoregression Models.} that Bitcoin appreciates in response to inflation or inflation expectation shocks, confirming its inflation-hedging property (see \cite{choi2022bitcoin} and \cite{blau2021inflation}) in line with claims by investors. Meanwhile, Bitcoin prices do not decrease after policy uncertainty shocks, partly consistent with the notion of Bitcoin's independence from government authorities \cite{choi2022bitcoin}.
+		
+		
+	
+		
+		\subsection{Verification Costs}
+		
+		For a market exchange, key attributes of a transaction need to be \textit{verified} by the parties involved. When an exchange takes place in person, the buyer can usually directly assess the quality of goods and the seller can verify cash. The only intermediary involved is the central bank, issuing and backing currency. When a transaction is performed online, financial intermediaries broker it by their verification services. These intermediaries add value to marketplaces by reducing \textit{information asymmetry} and the risk of \textit{moral hazard}. In the extreme case where verification costs are prohibitively high, markets unravel and beneficial trades do not take place \cite{catalini2020some}.
+		
+		In exchange for their services, intermediaries typically charge a fee. This is one of the costs buyers and sellers incur when they cannot verify transaction attributes themselves. Additional costs may stem from the intermediary having access to transaction data (\textit{privacy risk}), and being able to select which transactions to execute (\textit{censorship risk}). These costs are exacerbated when intermediaries gain market power, often as a result of the informational advantage they develop over transacting parties \cite{stiglitz2002information}. Blockchain technology can prevent information leakage by allowing market participants to verify transaction attributes and enforce contracts without exposing the underlying information to a third-party. This allows an agent to verify that the information is true without full access to all background information \cite{catalini2020some}.
+		
+		\subsection{Networking Costs}
+		
+		The cost of networking relates to the ability of operating a marketplace without assigning control to a centralized intermediary. Low networking costs are achieved by combining the ability to cheaply verify state with economic incentives targeted at rewarding those state transitions which are particularly valuable from a network perspective. Blockchains that utilize network effects have the following economic returns.
+		
+		 Firstly, blockchains that utilize network effects are less likely to leave market power in the hands of first movers or early players. This limits the ability of any party to unilaterally censor transactions or exclude participants from the network  and removes single points of failure \cite{catalini2020some}. A single point of failure is essentially a flaw in the design that poses a potential risk because it could lead to a situation in which just one malfunction or fault causes the whole system to stop working due to over-reliance on small subsets \cite{noveck2011single}.
+		 
+		 Secondly, capitalizing on network effects leads to lower \textit{privacy risks} as no single entity (or group) has superior control over the information \cite{catalini2020some}. In traditional platforms, the privacy risk is particularly troublesome in markets which allow intermediaries to access data. This concern is increasingly relevant because of the role that such data plays in the training of modern AI\footnote{Artificial Intelligence.} algorithms.
+		 
+		 Moreover, blockchain implementations such as permission-less\footnote{Bitcoin is an example of a permission-less blockchain which means that the known set of participants are unknown.} systems which take advantage of the lower cost of networking induce architectural changes, encouraging open opportunities for entrants to experiment with new business models \cite{catalini2020some}. By allowing for the separation of network benefits from the costs of market power, we can build creative and high quality applications on top of shared data while preserving the privacy of information.
+		
+		
+		
+		\subsection{Implication of Rent Seeking and Incentive Compatibility}
+
+		The amount of computational power devoted to blockchains
+		such as Bitcoin must simultaneously satisfy two conditions in an economic equilibrium \cite{budish2018economic}: first, a \textit{zero-profit condition} among miners who engage in rent-seeking while adding the next block to the chain and secondly an \textit{incentive compatibility} condition on the system's vulnerability to a ``majority attack''. The latter is secured when the computational costs of a majority attack exceed benefits. Together, these two equations (1 and 2) imply that equation 3 holds: the recurring ``flow'' payments to miners for running the blockchain must be large relative to the one-off ``stock'' benefits of attacking it. These flow payments are prohibitively high in the current crypto system, as argued by \cite{budish2018economic}.
+		
+		
+		%The model suggests that Bitcoin would be majority attacked
+		%if it became sufficiently economically important: e.g if it becomes a ``store of value'', which suggests that there are intrinsic economic limits to how economically important it can become in the first place \cite{budish2018economic}. 
+		
+	
+		
+		Let $P_{block}$ denote the economic reward to the miner who wins the computational
+		tournament. Let $c$ denote the per-block cost of 1 unit of computational power such as electricity and a rental cost for capital equipment. If there are $N$ units of computational power in the network, then each unit has a $\frac{1}{N}$ probability of winning the prize: $P_{block}$. The equilibrium amount of computational power devoted to blockchain mining $N^{*}$ is thus characterized by equation 1 below. Equation (1) is the standard characterization of a \textit{rent-seeking tournament}: prize in the tournament $P_{block}$ is dissipated by expenditures aimed at winning the prize $N^{*} c$.
+		
+		
+		
+		
+		
+		
+		
+		\begin{equation}
+			N^{*}c = P_{block}
+		\end{equation}
+	
+	
+	Suppose that there exists a majority attack that yields an expected
+	payoff to the attacker of $V_{attack}$ and that has an expected cost to the attacker, net of block rewards of $\alpha \times N^{*} c$.
+	
+	
+	
+
+
+Equation (2) below simply says that the costs of manipulating the blockchain $\alpha \times N^{*} c$ must be greater than the benefits of doing so, $V_{attack}$. The equation captures what enables the ``decentralized trust'' of the blockchain system is the computing power devoted to maintaining it. Economically, the key thing to note about equation (2) is that the cost of manipulation $V_{attack}$ is related to the \textit{flow cost} of maintaining the blockchain, i.e., to $N^{*} c$.
+
+
+\begin{equation}
+	\alpha \times N^{*}c > V_{attack}
+\end{equation}
+
+
+In the ideal equilibrium in which participants are honest, the amount of computational power devoted to maintaining the blockchain is characterized by the rent-seeking competition among miners, equation (1). Combining (1) with the incentive compatibility condition (2), we have the following equilibrium constraint (equation 3):
+
+
+\begin{equation}
+	P_{block} > \frac{V_{attack}}{\alpha}
+\end{equation}
+
+
+In sum, the equilibrium per-block payment to miners for running the blockchain must be
+large relative to the one-off benefits of attacking it. This places potentially serious economic constraints on the applicability of blockchain innovation. By
+analogy, imagine if users of the Visa network had to pay fees to Visa, every ten minutes that were large relative to the value of a successful one-off attack on the Visa network \cite{budish2018economic}.
+	
+
+\subsection{Speculation, Volatility and Transaction Costs}
+		
+	Some leading economists are very critical of the crypto ``bubble'' and argue that there is no \textit{fundamental} economic value of this technology. For instance, NYU based economist Nouriel Rubbini argued that ``Since the fundamental value of bitcoin is zero and would be negative if a proper carbon tax was applied to its massive pollution, the current bubble will eventually end in another bust'' \cite{roubini2018blockchain}. Crypto is also not a stable store of value due to its massive volatility and has limited use as a medium of exchange which raises questions over whether it can even be referred to as ``currency'' in the classical sense.
+	
+	
+
+	The first concept of asset pricing is that price equals the expected present value of dividends \cite{cochrane2009asset}. Bitcoin has no cash dividend, so how does it have value above and beyond cash dividends? If the price is greater than zero, either people see something that acts like a dividend, some value in holding the asset beyond its cash payments or they are willing to hold the asset despite a lower expected return or they think the price will keep going up forever, so that price appreciation alone provides a competitive return. The first explanation represents a ``convenience yields'' and the latter is a ``rational bubble'' such as the famous tulip bubble in 17th century \cite{goldgar2008tulipmania}.
+	
+	Some of the \textit{convenience yield} of Bitcoin is that it facilitates tax evasion, and allows for illegal voluntary transactions such as drugs, bribes and hiring undocumented workers. Bitcoin is great for avoiding capital controls i.e getting money out of China for instance \cite{cochrane2017bitcoin}. On top of this fundamental demand, it also has \textit{speculative demand}. Suppose that you know that Bitcoin will go up some more before its inevitable crash. Someone speculating on Bitcoin over a week cares little about its fundamental value since they can make a lot of money in a volatile market over the course of a week if they get on the right side of the volatility \cite{cochrane2017bitcoin}.
+	
+
+	
+
+	
+	\cite{krugman2018transaction} argued that in crypto, instead of money created by the click of a mouse, we have money that must be mined through resource-intensive computation, which has high transaction costs. Moreover, crypto, unlike \textit{fiat} money has no backstop to reality \cite{krugman2018transaction}. Their value depends entirely on \textit{self-fulfilling expectations}, which means a total collapse is a real possibility. If speculators were to have a collective moment of doubt, suddenly fearing that Bitcoins were worthless, Bitcoins would become actually worthless.
+	
+	
+	\subsection{Blockhain Trilemma}
+	
+	 While the ideal qualities of any record-keeping system are \textit{correctness} of information during exchange, \textit{decentralization} and \textit{cost efficiency}, there exists a \textit{Blockchain Trilemma}, as argued by \cite{abadi2018blockchain} (see Figure 3 below) i.e  no ledger can satisfy all three properties simultaneously. In particular, decentralization has three main costs: waste of resources, scalability problems and network externality inefficiencies. 
+	 
+	 In order to understand the blockchain trilemma, one needs to understand why blockchains require a waste of computational resources since this is the most significant of the three costs. Given that virtually anyone can add a public blockchain, a consensus algorithm\footnote{See appendix section 6.4.} determines the true history out of possibly different fraudulent reports. The solution proposed by \cite{nakamoto2008bitcoin} was to force blockchain writers\footnote{By writer, we mean agents who add blocks.} to perform a computationally intensive \textit{proof of work} \footnote{See appendix section 6.5.}.
+	 
+	 
+	 
+	 The \textit{free entry} in blockcchains has crucial consequences for how the agents are incentivized. Traditional centralized intermediaries are incentivized against fraud because they lose their franchise value when fraud is detected i.e they are incentivized \textit{dynamically} by their expected future profits. However, blockchain users have no franchise value because free entry implies that their rents are competed away by entrants. Meanwhile, the incentives provided by the \textit{proof of work} are \textit{static} since a block writer weighs the benefits of one-time attack against the cost of adding the block i.e the \textit{flow} of fees paid to honest\footnote{Agents who are not part of the attack but following honest chain of original blocks.} participants. Therefore, decentralization via free entry leads to a large waste of computational resources\footnote{Also see section 3.5 above.}.
+	 
+	 
+	 Free entry is also related to the second cost of blockchains: scalability problem. If a blockchain user does not trust any entity to truthfully report the information, that user must store the blockchain in its entirety. For example, Bitcoin, which processes only 7 transactions per second, exceeds 250GB in size due to these scalability problems \cite{abadi2018blockchain}. In short, the more a blockchain is used, the more costly it is to maintain truly decentralized record-keeping.
+	 
+
+	 
+	 
+	 Blockchains also allow for a second type of competition which is ``forking'' i.e a subset of the community wishes to change the rules and add new blocks. Accordingly, the blockchain will split in two: those who adopt the new rules will extend one chain, whereas those who stick to the old rules will ignore that chain and build another\footnote{See Appendix 6.4.} one. This type of ``fork competition'' has a remarkable property that all the information on established ledger is conveniently transferable towards the new growth. \cite{abadi2018blockchain} argues that with this type of portability, there is essentially perfect competition among ledgers.
+	 
+	 While this fork competition enhances competition, it is the direct cause of the third cost of blockchains, namely, network externality inefficiencies \cite{abadi2018blockchain}. The ease of switching between branches of a blockchain fork can engender instability and miscoordination. Blockchains may fail to fully exploit network externalities by splitting into several different forks over time. In fact, the two largest crypto blockchains i.e Bitcoin and Ethereum have experienced forks in which substantial portions of the community have abandoned the established chain.
+	
+
+	 
+		
+		
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.6\linewidth]{blockchain_trilemma.png}		
+				\caption{The Blockchain Trilemma (PoW is proof of work)}
+			\end{Center}
+		\end{figure}
+		
+		\section{Economic Policy and Cryptocurrencies}
+		
+		How does widespread adoption of cryptos effect economic policies? For instance, how does it change the paradigm of monetary and fiscal policy? Moreover,  which regulation interventions should be utilized to address downsides of crypto such as facilitation of illicit activities and threatening consumer protection?
+		
+		At one extreme, some countries have chosen to completely ban crypto. For instance, China enacted regulation that prohibits crypto trading. On the other end of the spectrum, Australia and Japan have both recognized crypto as a formal means of payment and financial asset \cite{regulation2022}. Figure 4 below summarizes legal treatment of crypto around the world.
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{cryptoregulation.png}		
+				\caption{Source is \color{blue}{https://complyadvantage.com/insights}}
+			\end{Center}
+		\end{figure}
+		
+		\subsection{Monetary Policy}
+		
+		
+		Theoretically, there could be a very large impact on monetary policy if crypto replaces conventional currencies. For example, economies that switch heavily from the use of their national currency to crypto would face issues similar to the classic \textit{dollarization} problem (see for instance \cite{calvo2002dollarization}). Such economies would find price levels and interest rates to be determined more by external factors than by national fiscal and monetary policies.
+		
+		However, for crypto to replace official currencies, it would have to face various challenges. Firstly, the supply should effect the real economy and this will occur when pure economic transactions are performed using this technology. Secondly, in the presence of \textit{fractional reserve banking}, the supply of crypto must respond to the liquidity crises, act as a lender of last resort and maintain financial stability. Thirdly, there is a \textit{principal agent problem} since there needs to be a system of checks and balances to keep the agent i.e the crypto issuer accountable to the principal. However, it is currently not possible to achieve this because of decentralization. Hence, at this point, the official currencies controlled by inflation-targeting, independent central banks still appear to be a far superior technology than crypto \cite{claeys2018crypto}.
+		
+		
+		Nevertheless, if societies gain faith in crypto, countries might face a situation similar to the gold standard era when the value of national currencies were fixed to gold. This would also be analogous to a \textit{global monetary union}. For instance, monetary policy could be simultaneously too loose for some countries and too tight for others, with a single policy having different effects on different nations \cite{oliverwyman2018}.
+	
+		
+		
+		It is also possible that central banks develop their own cryptocurrencies and some have considered it in India for instance. These could be limited to financial institutions or it could be made widely available to the public. Both the Bank of Canada and Singapore Monetary Authority have run pilot projects on this, but have concluded that the technology is still too early to adopt. Policymakers may also look to collect data to monitor the growth of this new market activity and its linkages to the financial system. In the extreme case, regulators could forbid any linkages between the financial institutions and the crypto ecosystem \cite{oliverwyman2018}.
+		
+		The stability and soundness of the financial system should be maintained through \textit{prudential} regulations\footnote{Prudential regulation requires financial institutions to comply with requirements to cope with risks associated with their financial activities.}. For instance, a cryptoasset  that  provides  equivalent  economic functions and poses the same risks compared with traditional assets should be subject to the same requirements  as  the  traditional  one.  The prudential treatment should, however, account for any additional risks arising from crypt exposures \cite{basel2021prudential}. Secondly, the   design   of   the   prudential   treatment should be simple since this is  still an  evolving technology. A simple and cautious treatment could in principle  be revisited in the future depending on the evolution of cryptoassets. Thirdly, any  committee-specified  prudential  treatment  of  cryptoassets  would  constitute  a  minimum  standard  for  internationally  active  banks.  Specific jurisdictions  would  be  free  to  apply  additional  and/or  more  conservative  measures  if  warranted \cite{basel2021prudential}.
+		
+		
+		
+		
+	\subsubsection{A Simple Model of Monetary Policy and Cryptocurrency}
+	
+	 In a world with only one currency, classical quantity theory yields $y_{t} = \frac{D_{t}}{P_{t}}$. Depending on output $y_{t}$, the central bank adjusts the dollar quantity $D_{t}$ such that the desired dollar price level $P_{t}$ realizes. If bitcoin is included in the standard model as a substitute for medium of exchange, then \cite{schilling2019some} show that the equilibrium market clearing implies:
+	
+	\begin{equation}
+		y_{t} = \frac{D_{t}}{P_{t}} + \frac{Q_{t}}{P_{t}} B_{t}
+	\end{equation}
+
+
+Holding $P_{t}$, $y_{t}$ and $Q_{t}$ constant, a deterministic increase in $B_{t}$ (aggregate bitcoin stock) must be compensated by a corresponding decrease in $D_{t}$ in equilibrium; in other words, bitcoin block rewards are financed by dollar taxes \cite{schilling2019some}. The block rewards, which are earned through mining effort are financed not by deflating the bitcoin currency but by the central bank, which has to accordingly decrease its dollar supply. It does so by imposing dollar lump-sum taxes on the population. Hence, the block rewards are not a tax on bitcoin holders but are financed through dollar taxes imposed by the central bank.
+
+
+	
+	
+		Suppose we start from the equilibrium at point $A$ in Figure 5 below (left) for the dollar quantity $D$. What happens as the central bank issues the dollar quantity $D^{'}$ instead? One way to label the ``conventional scenario'' is to think of the Bitcoin price as moving exogenously: in figure 5 (left) this is fixed at $Q = \bar{Q}$. In this case, we get a version of the classic relationship in that the increase in dollar quantity from $D$ to ${D}^{'}$ leads to a higher price level, moving the equilibrium from point $A$ to point $B$. Another possibility though, which we label the ``unconventional scenario'' is to instead fix the price level of dollar at some exogenously given level $P = \bar{P}$: now, increasing the dollar quantity reduces the Bitcoin price, moving the equilibrium from point $A$ to point $C$.
+		
+		 Conversely, and for the ``unconventional'' scenario, one may wish to think of the central bank as picking the dollar quantity as $D$ or $D^{'}$ and thereby picking the Bitcoin price to be either $Q$ or $Q^{'}$ (right end of Figure 5).
+		
+		
+			\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=1\linewidth]{uhlig_graph.png}		
+				\caption{Source is \cite{schilling2019some}.}
+			\end{Center}
+		\end{figure}
+		
+		
+		
+		
+		
+		
+		\subsection{Impact on Fiscal Policy}
+		
+		When a government or its central bank, creates money, it is essentially able to buy things for little or no cost. This has an immediate fiscal benefit by reducing the need to borrow or tax to buy the same goods. Estimates of the annual value of this \textit{seigniorage} in the US range from about \$30 billion to \$90 billion \cite{oliverwyman2018}, equivalent to about one or two percent of the federal budget. Total seigniorage from different sources has been an average of 164 billion rupees per year in Pakistan \cite{rao2011seigniorage}. This benefit would be at least partially at risk if cryptocurrencies come to substitute for national currency in the future.
+		
+		
+		The threat of crypto to the integrity of a country's fiscal policy is sustainable because of their high usefulness for tax evasion. They possess some of the most crucial characteristics of a traditional \textit{tax haven} since there is no jurisdiction in which they operate due to anonymity and are not subject to taxation at source \cite{obu2021fiscal}. 
+		
+		
+		
+		
+		\subsection{Regulation}
+		
+		
+		\subsubsection{Introduction}
+		
+		Earlier this year, the International Monetary Fund (IMF) released data indicating a correlation between bitcoin and the S\&P 500 index \cite{adrian2022crypto}. This raises fears of spillover of investor sentiments between the stock market and crypto. Moreover, the nature of underlying technology enables cross-border transactions without financial intermediaries, which creates risks for volatility and spill over effects \cite{whiteWEF2022}.
+		
+		While some countries such as India have amended existing laws, other interventions seemingly favored by the European Union and UAE propose setting up entirely new regulators to deal with the industry. For a truly global, \textit{coordinated} approach, countries must work together, leveraging best practices and learning from each other. As well as risk assessments and establishing common standards, there is also a pressing need to develop fit for purpose and inclusive solutions, through public-private collaboration \cite{whiteWEF2022}.
+		
+		
+		
+	
+		
+		\cite{nabilou2019regulate} argues that the focus of regulating decentralized crypto should be shifted toward the upper layers (i.e the application layers) upon which businesses are being developed. It is likely that certain levels of centralization in the upper layers would emerge, creating opportunities for regulators if the banking and payment systems play the role of \textit{policy surrogates}. This indirect regulatory approach can achieve decentralization along with increase in effectiveness and efficiency of regulation.
+		
+		
+		Next, I focus on options available for curbing illicit activities and consumer protection challenges emerging from cryptocurrencies.
+		
+		
+	
+	\subsubsection{Illicit Activities}
+	
+	
+	Critical attention should be paid to the risk and prevention of illicit activity, such as \textit{money laundering}, \textit{tax evasion} and \textit{terrorism financing}.
+	
+
+	
+	  Policy tools include increasing the level of monitoring and tracking in addition to actions against various parties including criminal penalties or banning/shutting down certain market participants if they are guilty of illicit activity. It could also be helpful for transactions to flag risky activity and ``blacklist'' certain users, helping mitigate harmful activity without requiring traditional identity documentation \cite{WEF2021governance}. Supervision of compliance with these obligations and building law enforcement capacity to investigate suspected illicit activity is needed. For instance, the Financial Action Task Force (FATF) recommendations of 2021 explicitly require regulation of digital currencies \cite{FATF2021}.
+	  
+	  	Moreover, public-private cooperation for sharing information on illicit finance risks could be constructive to address the risks. As an example, the US Treasury Department's ``\textit{FinCEN}'' has established a virtual currency information-sharing initiative with participation from the private sector including virtual currency money transmitters \cite{WEF2021governance}.
+		
+		
+		
+		\subsubsection{Consumer Protection}
+		
+		
+		
+		Most ordinary consumers do not understand the difference between public money (fiat currencies, backed by central bank) and private money (money held in commercial bank deposits). It is likely that firms in the blockchain industry will provide products and services that are similar in nature to those used by consumers today. This similarity can be misleading as consumers may not understand the different protections (or lack thereof) that apply to different payment services (see for instance \cite{WEF2021governance} and \cite{WEF2021regulation}). The most pressing consumer risks from the technology are displayed in Figure 6 below and some of them are discussed next.
+		
+		
+			\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{consumer_risks.png}		
+				\caption{Source is \cite{WEF2021governance}.}
+			\end{Center}
+		\end{figure}
+		
+		
+		
+		\textbf{Depositor Protection}
+		
+		Deposit insurance protects consumers from the risk of bankruptcy of
+		financial institutions. When it comes to digital currencies, there are two layers of consumer risks. Firstly, the risks of bankruptcy of the service provider and secondly the risk of bankruptcy of the deposit-taking institution. To address the first risk, countries often require service providers to be sufficiently funded and to set aside a certain percentage of their fund liabilities in a custodian account with a deposit-taking financial institution. In the case of the bankruptcy of depository institutions, consumers may only get back a subset of their money unless the currency providers are sufficiently capitalized \cite{WEF2021governance}.
+		
+		
+		
+		\textbf{Payment Risks}
+		
+		Different payment methods carry different consumer
+		protections. For example, cash is 100\% guaranteed
+		by a central bank, and typically carries the status
+		of legal tender.
+		
+		A \textit{push} transaction refers to a transaction initiated by the payer, who needs to know the name of the payee's financial institution and their account number. Meanwhile, \textit{pull} transaction refers to a transaction where it is initiated by the payee and the payee needs to know the name of the payer's financial institution and account information. While both types are subject to \textit{cybersecurity} risks, a push transaction is fundamentally less risky than a pull transaction for both the payer and the payee, since only the account
+		with sufficient funds governs the transaction. In contrast, a pull transaction could \textit{bounce} because the payee has no visibility of the balance of payer. Currently, it is debatable among economists whether transactions made in crypto
+		will be push-only transactions, given the technology may enable automatic payment upon fulfillment of certain conditions. Depending on their technical
+		choice and how accounts are structured, crypto may facilitate either push or pull transactions \cite{WEF2021governance}. If the latter are chosen, payment risks will increase.
+		
+		\textbf{Privacy Risk}
+		
+		Given that crypto is typically privately operated, it is vulnerable to business models prevalent in the technology industry. For example, this may include business practices developed in unregulated environments or include models
+		without privacy protection. Given the highly personal nature of transaction data, transparency is of significant importance. Moreover, for some crypto markets, a further risk to privacy has emerged in the form of \textit{surveillance} by blockchain analysis companies. These are organizations that analyze on-chain transactions and can match such data with other publicly available data. A variety of crypto ledgers are already under significant surveillance by such organizations (see \cite{WEF2021governance}).
+		
+
+		
+
+		
+		
+		
+		
+		
+	\textbf{Policy for Consumer Protection}
+		
+		The policy tools available for consumer protection include setting minimum standards for privacy protection, information sharing and safeguards against cyber-risks \cite{oliverwyman2018}.	To minimize potential negative impacts of stablecoins on consumers, it is important to carry out \textit{consumer education} to ensure people understand risks as well as their legal rights. Effective consumer education would include highlighting the different risks that stablecoins present compared not only to other stablecoins and digital currencies but also to existing currency options. Consumer education needs to be carried out by neutral and trusted parties to ensure a consistent and objective approach, free of marketing incentives \cite{WEF2021governance}.
+		
+		
+		Setting limits to the size of transactions	and wallet balances to limit the risk exposure of consumers is another option. As new firms come to market with a stablecoin, consideration should be given to the regulatory umbrella under which these services will be provided, as well as which functionaries will be responsible within this framework for the procedural implementation and authorization of regulations \cite{WEF2021governance}.
+		
+		
+		
+	
+		
+		
+		
+		
+		\section{Conclusion}
+		
+		
+		Cryptocurrencies have massive potential to revolutionize the record-keeping of financial transactions and ownership data. Some have even argued that distributed ledger technologies have the potential to be as ground-breaking as the invention of double-entry book keeping in 14th century Italy \cite{abadi2018blockchain}.
+		
+		Some key economic issues are electricity costs, high costs of maintaining incentive compatibility and rent seeking, low scalability, high volatility and the Blockchain Trilemma. These constraints limit the extent to which the technology will penetrate the society but also create economic costs when there is widespread adoption. Meanwhile, some major potential economic benefits are substitution for un-trustworthy fiat currencies, low verification and potentially low networking costs, as well as privacy and secrecy in transactions, which are not attainable with current fiat currencies.
+		
+		In the policy domain, widespread adoption of crypto has deep consequences for effectiveness of monetary and fiscal policy. Moreover, crypto introduces various other policy challenges such as cybersecurity, consumer protection risks and proliferation of illicit activities. Regulatory policies are needed to address these downsides. We need to learn a lot more about how to best design policy for the crypto domain at a brisk pace, given the rapidly evolving technology in Pakistan and beyond. 
+		
+		
+		
+		
+		
+		
+		\newpage
+		
+		\begin{center}
+		\textbf{Appendix}
+	     \end{center}
+		
+		
+		\begin{center}
+			\section{\textbf{Basic Features of Technology}}
+		\end{center}
+		
+		In their ground breaking paper \cite{nakamoto2008bitcoin} described the basic principles of this system. I will provide a brief overview of the key technological innovations and design features of Bitcoin. If you have deep knowledge of the design features of cryptocuurency, you may skip this appendix. For more detailed understanding, one useful reference point is the MIT lecture series on Blockchain and Money: 
+		
+		(see {\color{blue}{https://www.youtube.com/watch?v=EH6vE97qIP4}}).
+		
+		\subsection{\textbf{What is a Blockchain?}}
+		
+		A blockchain is a time stamped, append only data base, shared by nodes of a computer network and secured by cryptography. 
+		
+		It electronically stores information, making it secure and decentralized, requiring no trusted third party intervention. By structuring data into chunks or blocks that are strung together, it inherently makes an \textit{irreversible} timeline of data when implemented in a decentralized nature. When a block is filled, it is set in stone and becomes a part of this timeline. 
+		
+		Each block in the chain is given an exact \textit{time stamp} when it is added to the chain and new blocks can be added but previous ones cannot be edited, making it \textit{append only}. Figure 7 illustrates this process where a chain of blocks has formed, with the help of hash functions.
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{blockchaintechnology.png}		
+				\caption{}
+			\end{Center}
+		\end{figure}
+		
+		\subsection{\textbf{What are Hash Functions?}}
+		
+		\textit{Hash functions} allow appending the next blocks to previous blocks in a blockchain by compression of data, allowing tamper resistance and credibility. 
+		
+		It creates a digital footprint of the data by mapping the input data into a fixed array, similar to how zip codes work. A hash is a deterministic function, meaning that it always give the same hash for a given input. They make it infeasible though not impossible to determine the array of underlying private data from the public hash i.e it is infeasible that two sets of inputs $x$ and $y$ hash into the same output i.e $hash(x) = hash(y)$.
+		
+		There is also an \textit{avalanche} effect, implying that a small change in $x$ changes the hash completely, which adds to its security. Figure 8 illustrates this process where the true, deep, underlying data is transformed and compressed into a hashed text by using the particular hash function, SHA-2. Refer to the following resource for further understanding:
+		{\color{blue}{https://www.youtube.com/watch?v=160oMzblY8}}.
+		
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{hashfunction.jpg}		
+				\caption{}
+			\end{Center}
+		\end{figure}
+		
+		
+		\subsection{\textbf{Public Key and Private Key}}
+		
+		
+		Several suitable mathematical functions such as \textit{prime number exponentiation} and \textit{elliptic curve multiplication} are used by Bitcoin. These functions are ``practically'' irreversible, meaning that they are easy to calculate in one direction and infeasible to calculate in the opposite one. Based on these functions, cryptography enables the creation of digital secrets and digital signatures, practically immune from forgery.
+		
+		
+		In bitcoin, we use public key cryptography to create a key pair that controls access to bitcoin. The key pair consists of a private key and \textit{derived} from it is a unique public key. The public key is used to receive funds, and the private key is used to sign transactions to spend them. This signature can be validated against the public key without revealing the private key.
+		
+		When spending bitcoin, the current bitcoin owner presents her public key and signature in a transaction to spend bitcoin. Through the presentation of the public key and signature, everyone in the network can verify and accept the transaction as valid, confirming ownership at the time of transfer \cite{andreas2022mastering}. This \textit{encryption} and \textit{decryption} process is illustrated in Figure 9.
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{publickeyprivatekey.png}		
+				\caption{}
+			\end{Center}
+		\end{figure}
+		
+		
+		\subsection{\textbf{Majority Consensus}}
+		
+		A majority social consensus will make stale blocks (for instance, the purple blocks in Figure 10) or \textit{forks} irrelevant unless these forks continue a long time. Sometimes the alternative, purple block chain becomes so long that it forms its own native currency. Normally the majority consensus will make stale blocks irrelevant over time, which makes the system secure against attacks. 
+		
+		However, the possibility of  a majority attack, i.e 51\% attack always remains in principle. If the system becomes more centralized or attackers collaborate with each other, then a majority attack becomes more likely. If majority attacks occur, then the security of system becomes compromised.
+		
+		
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{consensusblockchain.png}	\caption{Black Path is Consensus}
+			\end{Center}
+		\end{figure}
+		
+		
+		\subsection{\textbf{Byzentine General's Problem}}
+		
+		
+		
+		
+		
+		A \textit{Byzentine General Problem} (see Figure 11) occurs when malicious actors or somebody who doesn't get the right information can lead to coordination failures and defeat. This is fundamentally a game theory problem.
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{ByzantineAttack.png}		
+				\caption{}
+			\end{Center}
+		\end{figure}
+		
+		This concept captures the complexity of a decentralized system in achieving a consensus on one truth. The central banking system ``solves'' this problem by evading it or by allocating trust to a third party or central authority, which is vulnerable to corruption. For instance, the central bank must be trusted not to debase the currency, but the history of fiat currencies is full of breaches of this trust.
+		
+		Bitcoin uses a proof of work mechanism (explained next) to solve the Byzentine General's Problem. As a monetary system, Bitcoin needed a way to manage ownership and prevent double spends\footnote{When a single set of currency assets are used for multiple transactions, it is called the double spending problem.}. If all members of the Bitcoin network, called nodes, could agree on which transactions occurred and in what order, they could verify ownership and establish a functioning, trust-less money without a centralized authority. By doing so, the \textit{Byzentine General Problem} is solved.
+		
+		
+		
+		\subsection{\textbf{Proof of Work}}
+		
+		
+		
+		
+		In order to add blocks to the blockchain, a member of the network must publish \textit{proof} that they invested considerable work into creating the block. This incentivizes them to publish honest information since the proof of work problem is computationally intensive and non-trivial to solve (see Figure 12).
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.3\linewidth]{proofofwork.jpg}		
+				\caption{}
+			\end{Center}
+		\end{figure}
+		
+		
+		
+		If any member of the network attempts to broadcast false information, all nodes will immediately recognize it as objectively invalid and ignore it. Since each node can verify all information on the Bitcoin network itself, there is no need to trust other members of the network, making Bitcoin a trust-less system. However, if oligopolistic miners control most bitcoin mining \cite{roubini2018blockchain} and many are out of reach for law enforcement in places such as China, Russia and Belarus, it will limit the extent to which the system is decentralized.
+		
+		
+		
+		The Bitcoin \textit{proof of work} difficulty is defined with respect to leading zeros in the hash function. \cite{nakamoto2008bitcoin} designed it such that after every two weeks, the difficulty increases. For example, the mining difficulty in February 2022 hit an all time high of 27.97 trillion hashes while the hash rate was 186.77 (EH/s) (where 1 exahash (EH) = 1 quintillion hashes) \cite{vaca2022}. The difficulty has exponentially increased over time; for instance, it was 7 trillion times harder to solve the puzzle in 2019 as compared to 2010 \cite{hacioglu2020digital}. Figure 13 below shows the recent increase in network difficulty level \cite{vaca2022}.
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		\begin{figure}[H]
+			\begin{Center}
+				\includegraphics[width=0.8\linewidth]{bitcoin_networksstat.png}		
+				\caption{T refers to trillian hashes}
+			\end{Center}
+		\end{figure}
+		
+		 % towards the end of the page
+		\vspace{8cm} % 15 cm of white space desired
+		%\lipsum[2-3] 
+		
+		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[width=0.7\linewidth]{pide-endpic.png}		
+				\caption*{}
+			\end{center}
+		\end{figure}
+		
+		
+		
+		
+		
+		
+		
+			\newpage
+		%_________________ End of Main Matter_________________%
+		%_________________ Reference Section _______________%
+		\phantomsection % allows for correct link to Table of Contents
+		\addcontentsline{toc}{section}{References} % Adds the line "References" to Table of contents
+		\singlespacing
+		%\bibliography{references} % Uses the Bibtex-file mybibfile.bib
+		\newpage
+		\bibliographystyle{aer}
+		\bibliography{references}
+		\clearpage
+		%_________________ Space for Supplementary Material _______________%
+		
+		
+		
+		
+		%\section*{Appendix}
+		
+		
+		
+		
+		
+	\end{document}
+
+
